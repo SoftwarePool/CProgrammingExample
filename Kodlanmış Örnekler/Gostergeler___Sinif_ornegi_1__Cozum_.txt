@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void islem(int sure, int *saat, int *dakika, int *saniye){
+	
+	*saat=sure/3600;
+	*dakika=(sure-(*saat*3600))/60;
+	*saniye=sure-(*saat*3600)-(*dakika*60);
+	
+}
+
+
+
+int main() {
+	
+	int sure=3601, saat, dakika, saniye;
+	
+	islem(sure,&saat, &dakika, &saniye);
+	
+	printf(" %d saat ,%d dakika, %d saniye ", saat, dakika, saniye);
+	
+	return 0;
+}

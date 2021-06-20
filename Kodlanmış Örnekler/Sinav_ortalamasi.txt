@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	int notlar[4][3];
+	int satir,sutun;
+	int toplam;
+	
+	/*Notlarin alinmasi*/
+	for(sutun=0;sutun<3;sutun++){
+		for(satir=0;satir<4;satir++){
+			scanf("%d",&notlar[satir][sutun]);
+		}
+	}
+	
+	/*Ortalama hesapla*/
+	for(sutun=0;sutun<3;sutun++){
+		toplam=0;
+		for(satir=0;satir<4;satir++){
+			toplam= toplam + notlar[satir][sutun];
+		}
+		printf("%d. sinavin ortalamasi: %.2f\n",sutun+1,toplam/4.0);
+	}
+	
+	
+	
+
+	
+	
+	return 0;
+}

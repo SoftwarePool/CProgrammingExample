@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void hosgeldiniz();
+void menu();
+void para_giris();
+void para_iade();
+void urun_secme();
+void uyari();
+void ariza_mesaj();
+void para_cek();
+void guncel_fiyat();
+
+
+		void hosgeldiniz()
+		{
+	 printf("-----------------------------------------------------------------------------------------------------------------------\n");
+ 	 printf("                                                     HOSGELDINIZ\n");
+ 	 printf("-----------------------------------------------------------------------------------------------------------------------\n\n");
+    return;
+}
+
+void menu(){
+	int secim;
+	printf("________________________________________________________________________________________________________________________\n");
+    printf("\t\t\t\t\t\t\tMENU: \n\n");
+    printf("");
+    printf("\t|\t1. Ulker Gofret Fiyat 1TL\t");   printf("2. Dido Fiyat 1TL\t\t"); 		printf("3. Albeni Fiyat: 0.50KRS\t|\n");         
+    printf("\t|\t4. 8 Kek Fiyat: 0.25KRS\t\t");     	 	printf("5. Popkek Fiyat: 0.50KRS\t");			printf("6. Eti Browne Fiyat: 0.5KRS\t|\n");         
+    printf("\t|\t7. Ikram Fiyat 1TL\t\t");    		printf("8. 9 Kat Fiyat: 0.25KRS\t\t");      	printf("9. Cizi Fiyat: 0.10KRS\t\t|\n");   
+	printf("\t|\t10. Su Fiyat: 0.50KRS\t\t");    		printf("11. Ice Tea Fiyat: 0.10KRS\t");     printf("12. Kola Fiyat 1TL\t\t|\n");  
+	printf("\t|\t13. Fanta Fiyat 1TL\t\t");    	 	printf("14. Soda Fiyat: 0.5KRS\t\t");       printf("15. Sut Fiyat: 0.25KRS \t\t|\n");        
+    printf("\t|\t16. Quit\t\t\t\t\t\t\t\t\t\t\t|\n");
+    printf("________________________________________________________________________________________________________________________\n");
+    printf("\n\n");
+    
+    return ;
+    }
+	
+void  urun_secme(){
+	int secme[14][2];
+	int urun,fiyat,secim;
+	printf("Lutfen seciminizi giriniz: ");
+    scanf("%d",&secim);
+	if(secim==1){
+		printf("Sectiginiz urun: 1.Ulker Gofret %d, Fiyat 1TL %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==2){
+		printf("Sectiginiz urun: 2.Dido %d, Fiyat: 1TL %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==3){
+		printf("Sectiginiz urun: Albeni %d ,  Fiyat: 0.50KRS%d\n",secme[urun][fiyat]);
+	}
+	else if(secim==4){
+		printf("Sectiginiz urun: 8 kek %d , Fiyat: 0.25KRS%d\n",secme[urun][fiyat]);
+	}
+	else if(secim==5){
+		printf("Sectiginiz urun: Popkek %d , Fiyat: 0.50KRS%d\n",secme[urun][fiyat]);
+	}
+	else if(secim==6){
+		printf("Sectiginiz urun: Eti Browne %d , Fiyat: 0.5KRÞ %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==7){
+		printf("Sectiginiz urun: Ikram %d , Fiyat: 1TL %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==8){
+		printf("Sectiginiz urun: 9 Kat %d , Fiyat: 0.25KRS %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==9){
+		printf("Sectiginiz urun: Cizi %d , Fiyat: 0.10KRÞ %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==10){
+		printf("Sectiginiz urun: Su %d , Fiyat: 0.50KRS %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==11){
+		printf("Sectiginiz urun: Ice Tea %d , Fiyat: 0.10KRS %d\n",secme[urun][fiyat]);
+	}
+	else if(secim==12){
+		printf("Sectiginiz urun: Kola %d , Fiyat: 1TL %d \n",secme[urun][fiyat]);
+	}
+	else if(secim==13){
+		printf("Sectiginiz urun: Fanta %d , Fiyat: 1TL %d \n",secme[urun][fiyat]);
+	}
+	else if(secim==14){
+		printf("Sectiginiz urun: Soda %d , Fiyat: 0.5KRÞ %d \n",secme[urun][fiyat]);
+	}
+	else if(secim==15){
+		printf("Sectiginiz urun: Sut %d , Fiyat: 0.25KRÞ %d \n",secme[urun][fiyat]);
+	}
+	
+}
+
+void para_giris(){
+	float para;
+	printf("Yalnizca 0.5krs, 0.10krs , 0.25krs, 0.50krs, 1 TL girisi yapiniz:");
+	scanf("%f",&para);
+	
+	 if(para>1){
+		printf("Hatali para girisi yaptiniz.");
+		
+	}
+	else {
+			urun_secme();
+	}
+
+}
+void para_iade(){
+
+
+}
+int main(int argc, char *argv[]) {
+	hosgeldiniz();
+	menu();
+	para_giris();
+	
+	return 0;
+}
+

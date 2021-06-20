@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	int not1,not2;
+	float ortalama;
+	char ad[30];
+	
+	FILE *oku;
+	FILE *yaz;
+	oku = fopen("ogrenciler.txt","r");
+	yaz = fopen("ortalama.txt","w");
+	
+	while(EOF!=(fscanf(oku,"%s %d %d", ad, &not1, &not2))){
+		ortalama=(not1+not2)/2.0;
+		fprintf(yaz,"%s %0.2f\n",ad,ortalama);
+	}
+	
+	
+	
+	fclose(oku);
+	fclose(yaz);	
+	return 0;
+}
